@@ -257,7 +257,7 @@ function addMessage(text, who) {
 
 async function getCoachResponse(message) {
   try {
-    const response = await fetch("http://localhost:8080/api/chat", {
+   const response = await fetch("https://careerly-ai-backend.onrender.com/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

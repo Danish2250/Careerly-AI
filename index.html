@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0a14" />
+  <title>Careerly.ai — AI Career Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="overview" aria-label="Careerly home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span>careerly<span class="brand-dot">.ai</span></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-page="overview"><span class="nav-icon">▦</span><span>Overview</span></button>
+        <button class="nav-item" data-page="resume"><span class="nav-icon">▤</span><span>Resume Analyzer</span><span class="nav-tag">AI</span></button>
+        <button class="nav-item" data-page="coach"><span class="nav-icon">✧</span><span>AI Career Coach</span></button>
+        <button class="nav-item" data-page="jobs"><span class="nav-icon">⌕</span><span>Job Matches</span></button>
+        <button class="nav-item" data-page="roadmap"><span class="nav-icon">◇</span><span>Skill Roadmap</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo">
+          <div class="promo-spark">✦</div>
+          <strong>Unlock your potential</strong>
+          <p>Build a career plan that feels like you.</p>
+          <button class="button button-soft button-small" data-page="roadmap">Explore roadmap <span>↗</span></button>
+        </div>
+        <div class="profile-row">
+          <div class="avatar">D</div>
+          <div class="profile-copy"><strong>Danish</strong><span>Career explorer</span></div>
+          <button class="icon-button" title="Profile options" id="profileBtn">···</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong id="crumbTitle">Overview</strong></div>
+        <div class="topbar-actions">
+          <span class="system-status"><i></i> AI workspace ready</span>
+          <button class="icon-button notification" id="notificationBtn" aria-label="Notifications">♧<b></b></button>
+          <button class="mobile-menu icon-button" id="menuBtn" aria-label="Open menu">☰</button>
+          <div class="avatar avatar-small">D</div>
+        </div>
+      </header>
+
+      <section class="page active-page" id="page-overview">
+        <div class="hero-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR PERSONAL CAREER SPACE</div>
+            <h1>Make your next move<br><span class="gradient-text">your best move.</span></h1>
+            <p class="hero-subtitle">Your career journey, powered by AI. Let's turn your goals into progress.</p>
+          </div>
+          <div class="date-chip"><span class="date-icon">◷</span><div><strong id="todayLabel">Your journey starts today</strong><span>A little progress goes a long way</span></div></div>
+        </div>
+
+        <div class="feature-banner">
+          <div class="banner-content">
+            <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR WEEKLY SNAPSHOT</div>
+            <h2>Small steps.<br>Big career energy.</h2>
+            <p>You're building momentum. Keep showing up, keep learning,<br class="desktop-only"> and your next opportunity gets closer.</p>
+            <button class="button button-primary" data-page="roadmap">View my roadmap <span>↗</span></button>
+          </div>
+          <div class="orb-scene" aria-hidden="true">
+            <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="orb-star">✦</div>
+            <span class="float-pill pill-ai">✦ AI powered</span><span class="float-pill pill-goal"><i></i> Goal focused</span><span class="float-pill pill-growth">↗ Growth mode</span>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><div class="eyebrow">YOUR CAREER TOOLKIT</div><h2>One workspace. More possibilities.</h2></div>
+          <span class="muted-small">Pick up where you left off</span>
+        </div>
+        <div class="tool-grid">
+          <button class="tool-card" data-page="resume">
+            <span class="tool-icon purple">▤</span><span class="tool-arrow">↗</span>
+            <h3>Resume Analyzer</h3><p>Spot strengths, close gaps, and make your resume stand out.</p><span class="tool-link">Analyze my resume <b>→</b></span>
+          </button>
+          <button class="tool-card" data-page="coach">
+            <span class="tool-icon blue">✧</span><span class="tool-arrow">↗</span>
+            <h3>AI Career Coach</h3><p>Get practical guidance for your next career decision.</p><span class="tool-link">Start a conversation <b>→</b></span>
+          </button>
+          <button class="tool-card" data-page="jobs">
+            <span class="tool-icon green">⌕</span><span class="tool-arrow">↗</span>
+            <h3>Job Matches</h3><p>Explore example roles that fit your interests and skills.</p><span class="tool-link">Explore roles <b>→</b></span>
+          </button>
+          <button class="tool-card" data-page="roadmap">
+            <span class="tool-icon orange">◇</span><span class="tool-arrow">↗</span>
+            <h3>Skill Roadmap</h3><p>Turn your learning goals into a clear, achievable plan.</p><span class="tool-link">Build my roadmap <b>→</b></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="page-resume">
+        <div class="page-intro"><div class="eyebrow">SMARTER APPLICATIONS</div><h1>Resume <span class="gradient-text">Analyzer</span></h1><p>Get a quick, local demo review of your resume text and target role.</p></div>
+        <div class="content-grid resume-layout">
+          <div class="panel">
+            <div class="panel-heading"><div><span class="panel-icon purple">▤</span><h2>Review your resume</h2></div><span class="demo-label">FRONTEND DEMO</span></div>
+            <label for="resumeText">Paste resume text</label>
+            <textarea id="resumeText" rows="10" placeholder="Paste your resume summary, skills, projects, education, and experience here..."></textarea>
+            <label for="targetRole">Target role</label>
+            <input id="targetRole" type="text" placeholder="e.g. Java Developer" value="Java Developer" />
+            <button class="button button-primary full-width" id="analyzeBtn">Analyze resume <span>✦</span></button>
+            <p class="fine-print">Demo analysis runs in your browser. No resume is uploaded to a server.</p>
+          </div>
+          <div class="panel result-panel">
+            <div class="panel-heading"><div><span class="panel-icon green">✦</span><h2>Resume insights</h2></div><span class="status-chip" id="resumeStatus">Waiting for text</span></div>
+            <div class="score-wrap"><div class="score-ring" id="scoreRing"><div><strong id="scoreValue">--</strong><span>DEMO SCORE</span></div></div><div><h3 id="scoreHeadline">Your next improvement starts here</h3><p id="scoreDescription">Paste your resume text to see a quick checklist of common resume signals.</p></div></div>
+            <div class="insight-list" id="insightList"><div class="empty-insight"><span>✧</span><p>Your suggestions will appear here after analysis.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-coach">
+        <div class="page-intro"><div class="eyebrow">YOUR THINKING PARTNER</div><h1>AI Career <span class="gradient-text">Coach</span></h1><p>Talk through your goals, find clarity, and choose a practical next step.</p></div>
+        <div class="coach-layout">
+          <div class="panel coach-panel">
+            <div class="chat-top"><div class="coach-avatar">✧</div><div><strong>Careerly Assistant</strong><span><i></i> Ready to help · demo mode</span></div><button class="icon-button" id="clearChatBtn" title="Clear chat">↻</button></div>
+            <div class="chat-messages" id="chatMessages">
+              <div class="message assistant"><div class="message-avatar">✦</div><div class="message-bubble"><span class="message-label">CAREERLY AI</span><p>Hey Danish! 👋 What are you working toward right now? Tell me your goal and we'll break it into manageable steps.</p></div></div>
+            </div>
+            <div class="suggestion-row"><button class="suggestion" data-prompt="Help me create a Java developer learning plan.">Build a Java plan</button><button class="suggestion" data-prompt="How can I prepare for software engineering placements?">Placement prep</button><button class="suggestion" data-prompt="Help me improve my resume projects.">Improve my projects</button></div>
+            <form class="chat-input-row" id="chatForm"><input id="chatInput" type="text" placeholder="Ask about your career..." autocomplete="off" aria-label="Message to career coach" /><button class="send-button" type="submit" aria-label="Send message">↑</button></form>
+            <p class="fine-print chat-disclaimer">Demo assistant with predefined guidance; connect an AI API for live AI responses.</p>
+          </div>
+          <aside class="panel coach-side"><div class="eyebrow">A LITTLE DIRECTION</div><h3>Good questions create momentum.</h3><p>Try one of these prompts to get started.</p><div class="prompt-list"><button data-prompt="I am a CSE student. What should I focus on to become a software engineer?"><span>01</span><div><strong>Find my focus</strong><small>Prioritize the skills that matter.</small></div><b>↗</b></button><button data-prompt="Create a 30-day plan to practice Java and DSA for placements."><span>02</span><div><strong>Make a 30-day plan</strong><small>Build a realistic daily routine.</small></div><b>↗</b></button><button data-prompt="Give me mock interview questions for a fresher Java developer."><span>03</span><div><strong>Practice interviews</strong><small>Prepare for the next opportunity.</small></div><b>↗</b></button></div></aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-jobs">
+        <div class="page-intro"><div class="eyebrow">OPPORTUNITIES TO EXPLORE</div><h1>Job <span class="gradient-text">Matches</span></h1><p>Explore sample roles and save the ones you want to research further.</p></div>
+        <div class="job-toolbar"><div class="search-box"><span>⌕</span><input id="jobSearch" type="search" placeholder="Search roles or skills..." /></div><select id="jobLevel" aria-label="Filter by experience level"><option value="all">All levels</option><option value="Fresher">Fresher</option><option value="Internship">Internship</option><option value="Entry level">Entry level</option></select></div>
+        <div class="job-grid" id="jobGrid">
+          <article class="job-card" data-title="Java Developer" data-skills="java spring sql backend" data-level="Fresher"><div class="job-card-top"><div class="company-logo logo-purple">J</div><span class="match-chip">Good starting point</span></div><h3>Java Developer</h3><p class="company-name">Software & Product Teams</p><div class="job-meta"><span>⌘ Backend</span><span>◷ Fresher</span><span>⌖ Flexible</span></div><p class="job-description">Build and maintain Java applications, APIs, and database-backed features.</p><div class="skill-tags"><span>Java</span><span>SQL</span><span>Spring Boot</span></div><button class="button button-outline save-job">Save role <span>＋</span></button></article>
+          <article class="job-card" data-title="Frontend Developer" data-skills="html css javascript react ui" data-level="Fresher"><div class="job-card-top"><div class="company-logo logo-blue">F</div><span class="match-chip">Portfolio friendly</span></div><h3>Frontend Developer</h3><p class="company-name">Web & Digital Teams</p><div class="job-meta"><span>⌘ Web</span><span>◷ Fresher</span><span>⌖ Flexible</span></div><p class="job-description">Create accessible, responsive interfaces and polished web experiences.</p><div class="skill-tags"><span>JavaScript</span><span>CSS</span><span>React</span></div><button class="button button-outline save-job">Save role <span>＋</span></button></article>
+          <article class="job-card" data-title="Software Engineering Intern" data-skills="programming dsa git testing" data-level="Internship"><div class="job-card-top"><div class="company-logo logo-green">S</div><span class="match-chip">Learning focused</span></div><h3>Software Engineering Intern</h3><p class="company-name">Engineering Teams</p><div class="job-meta"><span>⌘ Engineering</span><span>◷ Internship</span><span>⌖ Hybrid</span></div><p class="job-description">Contribute to features, review code, and learn practical engineering workflows.</p><div class="skill-tags"><span>DSA</span><span>Git</span><span>Testing</span></div><button class="button button-outline save-job">Save role <span>＋</span></button></article>
+          <article class="job-card" data-title="QA Automation Trainee" data-skills="testing selenium java automation" data-level="Entry level"><div class="job-card-top"><div class="company-logo logo-orange">Q</div><span class="match-chip">Structured pathway</span></div><h3>QA Automation Trainee</h3><p class="company-name">Quality Engineering Teams</p><div class="job-meta"><span>⌘ Testing</span><span>◷ Entry level</span><span>⌖ On-site</span></div><p class="job-description">Write test cases and automate repeatable checks for software products.</p><div class="skill-tags"><span>Testing</span><span>Java</span><span>Selenium</span></div><button class="button button-outline save-job">Save role <span>＋</span></button></article>
+        </div>
+        <p class="fine-print">These are illustrative role examples, not live vacancies or verified job listings.</p>
+      </section>
+
+      <section class="page" id="page-roadmap">
+        <div class="page-intro"><div class="eyebrow">YOUR NEXT CHAPTER</div><h1>Skill <span class="gradient-text">Roadmap</span></h1><p>A practical starter path for building job-ready software engineering skills.</p></div>
+        <div class="roadmap-summary panel"><div class="roadmap-summary-copy"><span class="panel-icon purple">◇</span><div><h2>Java Developer Launch Plan</h2><p>Follow the milestones in order. Mark each one complete as you progress.</p></div></div><div class="progress-block"><div class="progress-label"><span>YOUR PROGRESS</span><strong id="progressText">0 of 6 complete</strong></div><div class="progress-track"><span id="progressBar"></span></div></div></div>
+        <div class="roadmap-list" id="roadmapList">
+          <div class="roadmap-item"><button class="milestone-check" aria-label="Mark Java foundations complete">✓</button><div class="milestone-number">01</div><div class="milestone-copy"><span class="milestone-label">FOUNDATIONS · WEEK 1–2</span><h3>Java fundamentals & OOP</h3><p>Practice variables, loops, methods, classes, inheritance, and interfaces.</p><div class="skill-tags"><span>Core Java</span><span>OOP</span></div></div><span class="milestone-status">Not started</span></div>
+          <div class="roadmap-item"><button class="milestone-check" aria-label="Mark DSA practice complete">✓</button><div class="milestone-number">02</div><div class="milestone-copy"><span class="milestone-label">PROBLEM SOLVING · WEEK 3–5</span><h3>Data structures & algorithms</h3><p>Build consistency with arrays, strings, hash maps, stacks, queues, and basic sorting.</p><div class="skill-tags"><span>DSA</span><span>Practice</span></div></div><span class="milestone-status">Not started</span></div>
+          <div class="roadmap-item"><button class="milestone-check" aria-label="Mark SQL and Git complete">✓</button><div class="milestone-number">03</div><div class="milestone-copy"><span class="milestone-label">TOOLS · WEEK 6</span><h3>SQL, Git & GitHub</h3><p>Learn joins and CRUD queries, commit code, and publish projects with clear READMEs.</p><div class="skill-tags"><span>SQL</span><span>Git</span></div></div><span class="milestone-status">Not started</span></div>
+          <div class="roadmap-item"><button class="milestone-check" aria-label="Mark backend fundamentals complete">✓</button><div class="milestone-number">04</div><div class="milestone-copy"><span class="milestone-label">BACKEND · WEEK 7–9</span><h3>APIs & Spring Boot basics</h3><p>Create REST endpoints, validate input, connect a database, and handle errors.</p><div class="skill-tags"><span>REST APIs</span><span>Spring Boot</span></div></div><span class="milestone-status">Not started</span></div>
+          <div class="roadmap-item"><button class="milestone-check" aria-label="Mark project complete">✓</button><div class="milestone-number">05</div><div class="milestone-copy"><span class="milestone-label">BUILD · WEEK 10–11</span><h3>Ship one polished project</h3><p>Build a useful app, add screenshots and setup steps, and explain your design choices.</p><div class="skill-tags"><span>Project</span><span>README</span></div></div><span class="milestone-status">Not started</span></div>
+          <div class="roadmap-item"><button class="milestone-check" aria-label="Mark interview preparation complete">✓</button><div class="milestone-number">06</div><div class="milestone-copy"><span class="milestone-label">GET READY · WEEK 12</span><h3>Resume & interview practice</h3><p>Prepare project stories, revise Java and DSA, and practice explaining solutions aloud.</p><div class="skill-tags"><span>Resume</span><span>Mock interviews</span></div></div><span class="milestone-status">Not started</span></div>
+        </div>
+      </section>
+      <footer class="app-footer"><span>✦ Careerly.ai</span><span>Make progress, one step at a time.</span><span>Frontend prototype · local demo</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+com\careerly\controller\ApiController.class
+com\careerly\controller\ApiController$ChatRequest.class
+com\careerly\CareerlyApplication.class
+com\careerly\config\WebConfig.class
+com\careerly\service\AiService.class

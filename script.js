@@ -60,18 +60,114 @@ document.getElementById("analyzeBtn").addEventListener("click", () => {
   showToast("Your local demo resume review is ready.");
 });
 
-const coachingRules = [
-  { keys: ["java", "dsa", "developer", "programming"], response: "A practical path is: (1) strengthen Core Java and OOP, (2) solve a few DSA problems consistently, (3) learn SQL and Git, (4) build one Java + database project, and (5) practice explaining your code. Start with a realistic 45–60 minute daily block and review progress every week." },
-  { keys: ["placement", "interview", "job", "resume"], response: "For fresher placements, focus on three tracks: fundamentals (Java/OOP, DBMS, OS, networking), problem solving (arrays, strings, hash maps, sorting, then trees), and proof of work (one polished project with a clear README). Practice introducing yourself and explaining one project in two minutes." },
-  { keys: ["project", "portfolio", "github"], response: "Choose a project that solves a clear problem and is easy to demonstrate. Include a clean README, screenshots, setup instructions, meaningful commits, input validation, and a short list of future improvements. Be ready to explain what you personally built and why you chose the design." },
-  { keys: ["roadmap", "plan", "routine", "30-day", "daily"], response: "Try this weekly rhythm: 4 days for learning and coding, 1 day for a small project feature, 1 day for revision or a mock interview, and 1 lighter review day. Keep each session small enough to repeat. You can track milestones in the Skill Roadmap tab." },
-  { keys: ["salary", "lpa", "package"], response: "Rather than focusing only on a package number, build evidence of job readiness: core programming, DSA practice, a working project, communication, and interview practice. Compare roles using location, learning opportunities, responsibilities, and compensation together." }
-];
 function makeCoachReply(message) {
   const lower = message.toLowerCase();
-  const found = coachingRules.find(rule => rule.keys.some(key => lower.includes(key)));
-  if (found) return found.response;
-  return "A good next step is to make your goal specific. Write down the role you want, the skills you already have, and one gap to work on this week. Then choose a small task you can finish today. If you tell me your target role and current skill level, I can suggest a more focused plan. (This is a local demo response, not a live AI model.)";
+
+  if (/build a java plan|java plan|learn java|java roadmap/.test(lower)) {
+    return `JAVA LEARNING PLAN
+
+1. Core Java
+   Learn variables, data types, operators, loops, arrays and methods.
+
+2. Object-Oriented Programming
+   Understand classes, objects, constructors, inheritance, polymorphism, abstraction and encapsulation.
+
+3. Important Java concepts
+   Practise strings, exception handling, collections, generics and file handling.
+
+4. DSA with Java
+   Start with arrays and strings, then sorting, searching, linked lists, stacks, queues, trees and graphs.
+
+5. Build projects
+   Create a Student Management System or Expense Tracker using Java and a database.
+
+6. Daily practice
+   Code for 60–90 minutes and solve 1–2 problems. Review mistakes every weekend.
+
+TODAY'S TASK: Write 3 small Java programs using loops and arrays.`;
+  }
+
+  if (/placement prep|placement preparation|prepare for placement|placement/.test(lower)) {
+    return `PLACEMENT PREPARATION PLAN
+
+1. Programming
+   Strengthen Core Java, OOP, strings, arrays and collections.
+
+2. DSA
+   Practise arrays, strings, hash maps, sorting, searching, linked lists and trees.
+
+3. Computer Science subjects
+   Revise DBMS, SQL, Operating Systems and Computer Networks.
+
+4. Aptitude
+   Practise quantitative aptitude, logical reasoning and verbal ability.
+
+5. Projects
+   Prepare a clear explanation of your Careerly.ai project, tech stack, features and your contribution.
+
+6. Resume and GitHub
+   Keep your resume to one page, add working project links and write clear READMEs.
+
+7. Interview practice
+   Prepare your introduction, project explanation and common Java questions. Take one mock interview each week.
+
+TODAY'S TASK: Solve 2 array problems and revise one OOP concept.`;
+  }
+
+  if (/improve my projects|improve project|project improvement|portfolio|github/.test(lower)) {
+    return `PROJECT IMPROVEMENT CHECKLIST
+
+1. Improve the UI
+   Make every page responsive, consistent and easy to use on mobile and desktop.
+
+2. Make features work
+   Test every button, form, filter and navigation link. Remove placeholder actions.
+
+3. Connect the backend
+   Integrate the frontend with your Spring Boot REST APIs and show loading and error states.
+
+4. Add database support
+   Store user accounts and relevant project data persistently instead of relying only on demo data.
+
+5. Add authentication
+   Implement secure registration, login and protected pages if the project needs user accounts.
+
+6. Improve reliability
+   Validate inputs, handle API failures and never expose API keys in frontend code.
+
+7. Polish GitHub
+   Add screenshots, setup instructions, feature descriptions and a clear README.
+
+8. Demonstrate honestly
+   Clearly label demo features and only describe AI functionality as live when it is connected to a real AI service.
+
+TODAY'S TASK: Test one complete user journey in Careerly.ai and write down the first 3 issues you find.`;
+  }
+
+  if (/salary|lpa|package/.test(lower)) {
+    return `PLACEMENT READINESS PLAN
+
+1. Build strong programming fundamentals.
+2. Practise DSA consistently.
+3. Revise DBMS, OS and Computer Networks.
+4. Complete and explain one polished project.
+5. Practise aptitude and communication.
+6. Apply to suitable fresher roles and track applications.
+
+TODAY'S TASK: Choose one topic you find difficult and practise it for 45 minutes.`;
+  }
+
+  return `LET'S MAKE A PRACTICAL PLAN
+
+1. Choose your target role.
+2. List the skills you already know.
+3. Identify one important skill gap.
+4. Set a small weekly goal.
+5. Complete one practical task today.
+
+Tell me your target role and current skill level, and I can make the plan more specific.
+
+Note: These are built-in Careerly AI demo responses, not live AI-generated answers.`;
 }
 function addMessage(text, who) {
   const messages = document.getElementById("chatMessages");

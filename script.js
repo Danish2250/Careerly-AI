@@ -63,28 +63,49 @@ document.getElementById("analyzeBtn").addEventListener("click", () => {
 function makeCoachReply(message) {
   const lower = message.toLowerCase();
 
-  if (/build a java plan|java plan|learn java|java roadmap/.test(lower)) {
-    return `JAVA LEARNING PLAN
+  if (/java.*(plan|roadmap|developer|learning)|developer.*java|learn java/.test(lower)) {
+    return `JAVA DEVELOPER PLAN — MANAGEABLE STEPS
 
-1. Core Java
-   Learn variables, data types, operators, loops, arrays and methods.
+PHASE 1: Java basics (Weeks 1–2)
+1. Learn variables, data types, operators and input/output.
+2. Practise if/else, loops, methods and arrays.
+3. Write 2–3 small programs each day.
 
-2. Object-Oriented Programming
-   Understand classes, objects, constructors, inheritance, polymorphism, abstraction and encapsulation.
+PHASE 2: OOP and core Java (Weeks 3–4)
+1. Learn classes, objects and constructors.
+2. Understand inheritance, polymorphism, abstraction and encapsulation.
+3. Practise strings, exception handling and collections.
 
-3. Important Java concepts
-   Practise strings, exception handling, collections, generics and file handling.
+PHASE 3: DSA with Java (Weeks 5–8)
+1. Start with arrays and strings.
+2. Learn searching, sorting and hash maps.
+3. Move to linked lists, stacks, queues and trees.
+4. Solve 1–2 problems daily and review your mistakes.
 
-4. DSA with Java
-   Start with arrays and strings, then sorting, searching, linked lists, stacks, queues, trees and graphs.
+PHASE 4: Tools and database (Weeks 9–10)
+1. Learn Git and GitHub basics.
+2. Learn SQL and practise CRUD queries.
+3. Understand JDBC and how Java connects to a database.
 
-5. Build projects
-   Create a Student Management System or Expense Tracker using Java and a database.
+PHASE 5: Backend project (Weeks 11–12)
+1. Learn Spring Boot fundamentals.
+2. Build REST APIs.
+3. Connect your app to a database.
+4. Add validation and error handling.
+5. Publish the code with a clear README.
 
-6. Daily practice
-   Code for 60–90 minutes and solve 1–2 problems. Review mistakes every weekend.
+SIMPLE DAILY ROUTINE
+• 30 minutes: learn one concept.
+• 45 minutes: write Java code.
+• 30 minutes: solve a DSA problem.
+• 15 minutes: revise what you learned.
 
-TODAY'S TASK: Write 3 small Java programs using loops and arrays.`;
+YOUR FIRST TASK TODAY
+1. Set up Java and your IDE.
+2. Practise variables, input/output and if/else.
+3. Write a program to check whether a number is even or odd.
+
+Move to the next phase only when you can explain and practise the basics. This is a built-in learning plan, not a live AI-generated response.`;
   }
 
   if (/placement prep|placement preparation|prepare for placement|placement/.test(lower)) {

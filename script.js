@@ -162,3 +162,19 @@ roadmapItems.forEach(item => {
   });
 });
 updateRoadmap();
+
+
+// Cinematic preloader: short, reliable and reduced-motion aware.
+(() => {
+  const preloader = document.getElementById("cinematic-preloader");
+  if (!preloader) return;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.addEventListener("load", () => {
+    window.setTimeout(() => preloader.classList.add("is-hidden"), reduced ? 80 : 1250);
+    window.setTimeout(() => preloader.remove(), reduced ? 250 : 2200);
+  }, { once: true });
+  window.setTimeout(() => {
+    if (preloader.isConnected) preloader.classList.add("is-hidden");
+    window.setTimeout(() => preloader.remove(), 900);
+  }, 3500);
+})();
